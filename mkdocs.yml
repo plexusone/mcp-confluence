@@ -47,6 +47,7 @@ nav:
       - Environment Variables: configuration/environment.md
       - Claude Desktop: configuration/claude-desktop.md
   - Releases:
+      - Changelog: releases/changelog.md
       - v0.2.0: releases/v0.2.0.md
       - v0.1.0: releases/v0.1.0.md
   - Presentation: presentation.html
