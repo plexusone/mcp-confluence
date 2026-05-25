@@ -7,7 +7,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/agentplexus/mcp-confluence/storage"
+	"github.com/plexusone/mcp-confluence/storage"
 )
 
 func TestNewClient(t *testing.T) {

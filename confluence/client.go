@@ -11,7 +11,7 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/agentplexus/mcp-confluence/storage"
+	"github.com/plexusone/mcp-confluence/storage"
 )
 
 // Client is a Confluence REST API client.

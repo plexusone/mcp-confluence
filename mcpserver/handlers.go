@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/agentplexus/mcp-confluence/storage"
+	"github.com/plexusone/mcp-confluence/storage"
 )
 
 func (s *Server) handleReadPage(ctx context.Context, input map[string]interface{}) (interface{}, error) {

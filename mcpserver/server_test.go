@@ -7,8 +7,8 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/agentplexus/mcp-confluence/confluence"
-	"github.com/agentplexus/mcp-confluence/storage"
+	"github.com/plexusone/mcp-confluence/confluence"
+	"github.com/plexusone/mcp-confluence/storage"
 )
 
 func TestNew(t *testing.T) {

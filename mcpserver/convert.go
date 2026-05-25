@@ -3,7 +3,7 @@ package mcpserver
 import (
 	"fmt"
 
-	"github.com/agentplexus/mcp-confluence/storage"
+	"github.com/plexusone/mcp-confluence/storage"
 )
 
 // blocksToJSON converts a slice of storage.Block to JSON-serializable format.

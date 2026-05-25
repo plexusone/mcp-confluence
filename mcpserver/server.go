@@ -8,7 +8,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/agentplexus/mcp-confluence/confluence"
+	"github.com/plexusone/mcp-confluence/confluence"
 )
 
 // Server is the MCP server for Confluence.
