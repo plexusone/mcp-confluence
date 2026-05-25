@@ -1,17 +1,20 @@
 # Roadmap
 
-This document outlines planned features and improvements for go-confluence.
+This document outlines planned features and improvements for mcp-confluence.
 
-## Current Status (v0.1.0)
+## Current Status (v0.2.0)
 
-The initial release provides:
+The v0.2.0 release provides:
 
+- **Composable Architecture**: Built on [omniskill](https://github.com/plexusone/omniskill) for modular, reusable skills
+- **Vault-Backed Credentials**: Secure credential storage via 1Password, Bitwarden, and more
+- **Cobra CLI**: Command-line interface with subcommands and direct tool invocation
 - **storage package**: IR types, render, parse, validate for Confluence Storage Format
 - **confluence package**: REST API client with IR integration
-- **mcpserver package**: MCP server implementation with structured tools
-- **cmd/mcp-server**: Executable MCP server binary
+- **skills/confluence package**: Composable omniskill module
+- **cmd/mcp-confluence**: Executable MCP server with CLI tools
 
-## Short-term (v0.2.0)
+## Short-term (v0.3.0)
 
 ### Additional Block Types
 
@@ -43,7 +46,7 @@ The initial release provides:
 - [ ] Page history/versions
 - [ ] Page permissions
 
-## Medium-term (v0.3.0)
+## Medium-term (v0.4.0)
 
 ### Macro Support
 
@@ -75,7 +78,6 @@ The initial release provides:
 
 - [ ] HTTP transport (in addition to stdio)
 - [ ] WebSocket transport
-- [ ] Authentication options (OAuth, PAT)
 - [ ] Rate limiting
 - [ ] Caching layer
 - [ ] Batch operations

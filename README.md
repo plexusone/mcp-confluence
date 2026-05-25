@@ -486,5 +486,6 @@ MIT
 
 ## See Also
 
+- [CHANGELOG.md](CHANGELOG.md) - Release history
 - [ROADMAP.md](ROADMAP.md) - Planned features
 - [Confluence Storage Format Documentation](https://confluence.atlassian.com/doc/confluence-storage-format-790796544.html)
