@@ -39,13 +39,13 @@ This library provides:
 ### MCP Server Binary
 
 ```bash
-go install github.com/agentplexus/mcp-confluence/cmd/mcp-confluence@latest
+go install github.com/plexusone/mcp-confluence/cmd/mcp-confluence@latest
 ```
 
 ### As a Library
 
 ```bash
-go get github.com/agentplexus/mcp-confluence
+go get github.com/plexusone/mcp-confluence
 ```
 
 ## Quick Start
@@ -53,7 +53,7 @@ go get github.com/agentplexus/mcp-confluence
 ### Using the Storage Package
 
 ```go
-import "github.com/agentplexus/mcp-confluence/storage"
+import "github.com/plexusone/mcp-confluence/storage"
 
 // Create a page with structured blocks
 page := &storage.Page{
@@ -90,7 +90,7 @@ if err := storage.Validate(xhtml); err != nil {
 ### Using the Confluence Client
 
 ```go
-import "github.com/agentplexus/mcp-confluence/confluence"
+import "github.com/plexusone/mcp-confluence/confluence"
 
 // Create client
 auth := confluence.BasicAuth{
@@ -116,7 +116,7 @@ err = client.UpdatePageStorage(ctx, info.ID, page, info.Version, info.Title)
 
 ```bash
 # Install from GitHub
-go install github.com/agentplexus/mcp-confluence/cmd/mcp-confluence@latest
+go install github.com/plexusone/mcp-confluence/cmd/mcp-confluence@latest
 
 # Or build from source
 go build -o mcp-confluence ./cmd/mcp-confluence
@@ -168,6 +168,8 @@ See [Enterprise MCP configuration](https://code.claude.com/docs/en/mcp) for deta
 
 Add to your Claude Desktop settings (`~/Library/Application Support/Claude/claude_desktop_config.json` on macOS):
 
+#### With Direct Credentials
+
 ```json
 {
   "mcpServers": {
@@ -183,13 +185,110 @@ Add to your Claude Desktop settings (`~/Library/Application Support/Claude/claud
 }
 ```
 
+#### With 1Password
+
+```json
+{
+  "mcpServers": {
+    "confluence": {
+      "command": "/path/to/mcp-confluence",
+      "env": {
+        "CONFLUENCE_BASE_URL": "https://example.atlassian.net/wiki",
+        "OP_SERVICE_ACCOUNT_TOKEN": "ops_...",
+        "OMNITOKEN_VAULT_URI": "op://MyVault",
+        "OMNITOKEN_CREDENTIALS_NAME": "confluence"
+      }
+    }
+  }
+}
+```
+
+#### With Bitwarden
+
+```json
+{
+  "mcpServers": {
+    "confluence": {
+      "command": "/path/to/mcp-confluence",
+      "env": {
+        "CONFLUENCE_BASE_URL": "https://example.atlassian.net/wiki",
+        "BW_ACCESS_TOKEN": "...",
+        "BW_ORGANIZATION_ID": "...",
+        "OMNITOKEN_VAULT_URI": "bw://org-id",
+        "OMNITOKEN_CREDENTIALS_NAME": "confluence"
+      }
+    }
+  }
+}
+```
+
+#### With Keeper
+
+```json
+{
+  "mcpServers": {
+    "confluence": {
+      "command": "/path/to/mcp-confluence",
+      "env": {
+        "CONFLUENCE_BASE_URL": "https://example.atlassian.net/wiki",
+        "KSM_TOKEN": "US:...",
+        "OMNITOKEN_VAULT_URI": "keeper://",
+        "OMNITOKEN_CREDENTIALS_NAME": "confluence"
+      }
+    }
+  }
+}
+```
+
+### Option 2: Vault-Backed Credentials
+
+Use [omnitoken](https://github.com/plexusone/omnitoken) with vault backends for secure credential storage.
+
+| Provider | URI Pattern | Requirements |
+|----------|-------------|--------------|
+| 1Password | `op://vault` | `OP_SERVICE_ACCOUNT_TOKEN` env var |
+| Bitwarden | `bw://org-id` | `BW_ACCESS_TOKEN` and `BW_ORGANIZATION_ID` env vars |
+| Keeper | `keeper://` | `KSM_TOKEN` or `KSM_CONFIG` env var |
+| File | `file:///path` | None |
+
+#### 1Password Example
+
+```bash
+export OP_SERVICE_ACCOUNT_TOKEN="ops_..."
+mcp-confluence --vault op://MyVault --credentials-name confluence \
+               --base-url https://example.atlassian.net/wiki
+```
+
+#### Bitwarden Example
+
+```bash
+export BW_ACCESS_TOKEN="..."
+export BW_ORGANIZATION_ID="..."
+mcp-confluence --vault bw://org-id --credentials-name confluence \
+               --base-url https://example.atlassian.net/wiki
+```
+
+#### Keeper Example
+
+```bash
+export KSM_TOKEN="US:..."
+mcp-confluence --vault keeper:// --credentials-name confluence \
+               --base-url https://example.atlassian.net/wiki
+```
+
 ### Environment Variables
 
-| Variable | Description |
-|----------|-------------|
-| `CONFLUENCE_BASE_URL` | Your Confluence instance URL (e.g., `https://example.atlassian.net/wiki`) |
-| `CONFLUENCE_USERNAME` | Your Confluence username (usually your email) |
-| `CONFLUENCE_API_TOKEN` | API token from [Atlassian Account Settings](https://id.atlassian.com/manage-profile/security/api-tokens) |
+| Variable | Flag | Description |
+|----------|------|-------------|
+| `CONFLUENCE_BASE_URL` | `--base-url` | Your Confluence instance URL |
+| `CONFLUENCE_USERNAME` | `--username` | Your Confluence username (usually your email) |
+| `CONFLUENCE_API_TOKEN` | `--api-token` | API token from [Atlassian Account Settings](https://id.atlassian.com/manage-profile/security/api-tokens) |
+| `OMNITOKEN_VAULT_URI` | `--vault` | Vault URI for credentials |
+| `OMNITOKEN_CREDENTIALS_NAME` | `--credentials-name` | Name of credentials in vault (default: `confluence`) |
+| `OP_SERVICE_ACCOUNT_TOKEN` | - | 1Password service account token |
+| `BW_ACCESS_TOKEN` | - | Bitwarden access token |
+| `BW_ORGANIZATION_ID` | - | Bitwarden organization ID |
+| `KSM_TOKEN` | - | Keeper token (format: `REGION:TOKEN`) |
 
 ### Running Standalone (for testing)
 
@@ -368,15 +467,15 @@ MIT
 - [ROADMAP.md](ROADMAP.md) - Planned features
 - [Confluence Storage Format Documentation](https://confluence.atlassian.com/doc/confluence-storage-format-790796544.html)
 
- [build-status-svg]: https://github.com/agentplexus/mcp-confluence/actions/workflows/ci.yaml/badge.svg?branch=main
- [build-status-url]: https://github.com/agentplexus/mcp-confluence/actions/workflows/ci.yaml
- [lint-status-svg]: https://github.com/agentplexus/mcp-confluence/actions/workflows/lint.yaml/badge.svg?branch=main
- [lint-status-url]: https://github.com/agentplexus/mcp-confluence/actions/workflows/lint.yaml
- [goreport-svg]: https://goreportcard.com/badge/github.com/agentplexus/mcp-confluence
- [goreport-url]: https://goreportcard.com/report/github.com/agentplexus/mcp-confluence
- [docs-godoc-svg]: https://pkg.go.dev/badge/github.com/agentplexus/mcp-confluence
- [docs-godoc-url]: https://pkg.go.dev/github.com/agentplexus/mcp-confluence
+ [build-status-svg]: https://github.com/plexusone/mcp-confluence/actions/workflows/ci.yaml/badge.svg?branch=main
+ [build-status-url]: https://github.com/plexusone/mcp-confluence/actions/workflows/ci.yaml
+ [lint-status-svg]: https://github.com/plexusone/mcp-confluence/actions/workflows/lint.yaml/badge.svg?branch=main
+ [lint-status-url]: https://github.com/plexusone/mcp-confluence/actions/workflows/lint.yaml
+ [goreport-svg]: https://goreportcard.com/badge/github.com/plexusone/mcp-confluence
+ [goreport-url]: https://goreportcard.com/report/github.com/plexusone/mcp-confluence
+ [docs-godoc-svg]: https://pkg.go.dev/badge/github.com/plexusone/mcp-confluence
+ [docs-godoc-url]: https://pkg.go.dev/github.com/plexusone/mcp-confluence
  [license-svg]: https://img.shields.io/badge/license-MIT-blue.svg
- [license-url]: https://github.com/agentplexus/mcp-confluence/blob/master/LICENSE
- [used-by-svg]: https://sourcegraph.com/github.com/agentplexus/mcp-confluence/-/badge.svg
- [used-by-url]: https://sourcegraph.com/github.com/agentplexus/mcp-confluence?badge
+ [license-url]: https://github.com/plexusone/mcp-confluence/blob/master/LICENSE
+ [used-by-svg]: https://sourcegraph.com/github.com/plexusone/mcp-confluence/-/badge.svg
+ [used-by-url]: https://sourcegraph.com/github.com/plexusone/mcp-confluence?badge
