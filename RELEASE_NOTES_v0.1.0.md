@@ -81,7 +81,7 @@ The `confluence` package provides a REST API client with:
 ## Installation
 
 ```bash
-go install github.com/agentplexus/mcp-confluence/cmd/mcp-confluence@latest
+go install github.com/plexusone/mcp-confluence/cmd/mcp-confluence@latest
 ```
 
 ## Configuration
@@ -122,6 +122,6 @@ Add to `~/.claude.json` or `.mcp.json`:
 
 ## Links
 
-- **Repository:** https://github.com/agentplexus/mcp-confluence
+- **Repository:** https://github.com/plexusone/mcp-confluence
 - **Documentation:** See README.md
 - **Roadmap:** See ROADMAP.md
