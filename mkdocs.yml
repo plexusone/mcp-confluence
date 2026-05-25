@@ -1,0 +1,67 @@
+site_name: Confluence MCP Server
+site_description: MCP server for Confluence with safe handling of Storage Format
+site_url: https://plexusone.github.io/mcp-confluence
+repo_url: https://github.com/plexusone/mcp-confluence
+repo_name: plexusone/mcp-confluence
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Installation: getting-started/installation.md
+      - Setup: getting-started/setup.md
+      - Quick Start: getting-started/quickstart.md
+  - Tools Reference:
+      - Overview: tools/overview.md
+  - Storage Format:
+      - Overview: storage-format/overview.md
+      - Block Types: storage-format/blocks.md
+  - Configuration:
+      - Credentials: configuration/credentials.md
+      - Environment Variables: configuration/environment.md
+      - Claude Desktop: configuration/claude-desktop.md
+  - Presentation: presentation.html
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/plexusone/mcp-confluence
