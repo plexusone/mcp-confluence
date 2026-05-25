@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://plexusone.github.io/mcp-confluence/releases/v0.2.0/">
+        <link rel="canonical" href="https://plexusone.github.io/mcp-confluence/releases/changelog/">
       
       
-        <link rel="prev" href="../changelog/">
+        <link rel="prev" href="../../configuration/claude-desktop/">
       
       
-        <link rel="next" href="../v0.1.0/">
+        <link rel="next" href="../v0.2.0/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>v0.2.0 - Confluence MCP Server</title>
+        <title>Changelog - Confluence MCP Server</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#release-notes-v020" class="md-skip">
+        <a href="#changelog" class="md-skip">
           Skip to content
         </a>
       
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              v0.2.0
+              Changelog
             
           </span>
         </div>
@@ -745,29 +745,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../changelog/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Changelog
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -785,7 +762,7 @@
   
   
   <span class="md-ellipsis">
-    v0.2.0
+    Changelog
     
   </span>
   
@@ -798,7 +775,7 @@
   
   
   <span class="md-ellipsis">
-    v0.2.0
+    Changelog
     
   </span>
   
@@ -821,6 +798,25 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#unreleased" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unreleased
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v020-2026-05-24" class="md-nav__link">
+    <span class="md-ellipsis">
+      v0.2.0 - 2026-05-24
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v0.2.0 - 2026-05-24">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#highlights" class="md-nav__link">
     <span class="md-ellipsis">
       Highlights
@@ -828,57 +824,56 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#breaking-changes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Breaking Changes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#new-features" class="md-nav__link">
-    <span class="md-ellipsis">
-      New Features
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="New Features">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#composable-skill-architecture" class="md-nav__link">
+  <a href="#breaking" class="md-nav__link">
     <span class="md-ellipsis">
-      Composable Skill Architecture
+      Breaking
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#vault-backed-credentials" class="md-nav__link">
+  <a href="#upgrade-guide" class="md-nav__link">
     <span class="md-ellipsis">
-      Vault-Backed Credentials
+      Upgrade Guide
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#cobra-cli" class="md-nav__link">
+  <a href="#added" class="md-nav__link">
     <span class="md-ellipsis">
-      Cobra CLI
+      Added
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#api-testing-example" class="md-nav__link">
+  <a href="#changed" class="md-nav__link">
     <span class="md-ellipsis">
-      API Testing Example
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependencies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation
     </span>
   </a>
   
@@ -890,55 +885,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#documentation" class="md-nav__link">
+  <a href="#v010-2025-12-29" class="md-nav__link">
     <span class="md-ellipsis">
-      Documentation
+      v0.1.0 - 2025-12-29
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dependencies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dependencies
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#migration-guide" class="md-nav__link">
-    <span class="md-ellipsis">
-      Migration Guide
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Migration Guide">
+    <nav class="md-nav" aria-label="v0.1.0 - 2025-12-29">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#update-installation" class="md-nav__link">
+  <a href="#highlights_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Update Installation
+      Highlights
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#update-imports" class="md-nav__link">
+  <a href="#added_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Update Imports
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update-claude-desktop-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update Claude Desktop Configuration
+      Added
     </span>
   </a>
   
@@ -953,6 +921,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../v0.2.0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    v0.2.0
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1037,6 +1028,25 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#unreleased" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unreleased
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v020-2026-05-24" class="md-nav__link">
+    <span class="md-ellipsis">
+      v0.2.0 - 2026-05-24
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v0.2.0 - 2026-05-24">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#highlights" class="md-nav__link">
     <span class="md-ellipsis">
       Highlights
@@ -1044,57 +1054,56 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#breaking-changes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Breaking Changes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#new-features" class="md-nav__link">
-    <span class="md-ellipsis">
-      New Features
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="New Features">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#composable-skill-architecture" class="md-nav__link">
+  <a href="#breaking" class="md-nav__link">
     <span class="md-ellipsis">
-      Composable Skill Architecture
+      Breaking
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#vault-backed-credentials" class="md-nav__link">
+  <a href="#upgrade-guide" class="md-nav__link">
     <span class="md-ellipsis">
-      Vault-Backed Credentials
+      Upgrade Guide
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#cobra-cli" class="md-nav__link">
+  <a href="#added" class="md-nav__link">
     <span class="md-ellipsis">
-      Cobra CLI
+      Added
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#api-testing-example" class="md-nav__link">
+  <a href="#changed" class="md-nav__link">
     <span class="md-ellipsis">
-      API Testing Example
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependencies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation
     </span>
   </a>
   
@@ -1106,55 +1115,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#documentation" class="md-nav__link">
+  <a href="#v010-2025-12-29" class="md-nav__link">
     <span class="md-ellipsis">
-      Documentation
+      v0.1.0 - 2025-12-29
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dependencies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dependencies
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#migration-guide" class="md-nav__link">
-    <span class="md-ellipsis">
-      Migration Guide
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Migration Guide">
+    <nav class="md-nav" aria-label="v0.1.0 - 2025-12-29">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#update-installation" class="md-nav__link">
+  <a href="#highlights_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Update Installation
+      Highlights
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#update-imports" class="md-nav__link">
+  <a href="#added_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Update Imports
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update-claude-desktop-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update Claude Desktop Configuration
+      Added
     </span>
   </a>
   
@@ -1184,135 +1166,82 @@
   
 
 
-<h1 id="release-notes-v020">Release Notes v0.2.0<a class="headerlink" href="#release-notes-v020" title="Permanent link">&para;</a></h1>
-<p>Major architectural upgrade to a composable omniskill-based MCP server with vault-backed credentials.</p>
-<h2 id="highlights">Highlights<a class="headerlink" href="#highlights" title="Permanent link">&para;</a></h2>
+<h1 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h1>
+<p>All notable changes to this project will be documented in this file.</p>
+<p>The format is based on <a href="https://keepachangelog.com/en/1.1.0/">Keep a Changelog</a>,
+this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semantic Versioning</a>,
+commits follow <a href="https://www.conventionalcommits.org/en/v1.0.0/">Conventional Commits</a>,
+and this changelog is generated by <a href="https://github.com/grokify/structured-changelog">Structured Changelog</a>.</p>
+<h2 id="unreleased"><a href="https://github.com/plexusone/mcp-confluence/compare/v0.2.0...HEAD">Unreleased</a><a class="headerlink" href="#unreleased" title="Permanent link">&para;</a></h2>
+<h2 id="v020-2026-05-24"><a href="https://github.com/plexusone/mcp-confluence/compare/v0.1.0...v0.2.0">v0.2.0</a> - 2026-05-24<a class="headerlink" href="#v020-2026-05-24" title="Permanent link">&para;</a></h2>
+<h3 id="highlights">Highlights<a class="headerlink" href="#highlights" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Composable Architecture</strong>: Built on <a href="https://github.com/plexusone/omniskill">omniskill</a> for modular, reusable skills</li>
-<li><strong>Vault-Backed Credentials</strong>: Secure credential storage via 1Password, Bitwarden, and more</li>
-<li><strong>Cobra CLI</strong>: New command-line interface with subcommands and direct tool invocation</li>
-<li><strong>Module Rename</strong>: Moved from <code>agentplexus</code> to <code>plexusone</code> organization</li>
+<li>Composable omniskill architecture for modular, reusable MCP skills</li>
+<li>Vault-backed credentials via omnitoken (1Password, Bitwarden, file, env)</li>
+<li>Cobra CLI with subcommands and direct tool invocation</li>
 </ul>
-<h2 id="breaking-changes">Breaking Changes<a class="headerlink" href="#breaking-changes" title="Permanent link">&para;</a></h2>
+<h3 id="breaking">Breaking<a class="headerlink" href="#breaking" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Module path changed from <code>github.com/agentplexus/mcp-confluence</code> to <code>github.com/plexusone/mcp-confluence</code></li>
-<li>CLI now uses cobra with <code>--flag</code> style instead of <code>-flag</code></li>
+<li>Module path changed from <code>github.com/agentplexus/mcp-confluence</code> to <code>github.com/plexusone/mcp-confluence</code> (<a href="https://github.com/plexusone/mcp-confluence/commit/0a3b89f"><code>0a3b89f</code></a>)</li>
+<li>CLI now uses cobra with <code>--flag</code> style instead of <code>-flag</code> (<a href="https://github.com/plexusone/mcp-confluence/commit/978eb21"><code>978eb21</code></a>)</li>
 </ul>
-<h2 id="new-features">New Features<a class="headerlink" href="#new-features" title="Permanent link">&para;</a></h2>
-<h3 id="composable-skill-architecture">Composable Skill Architecture<a class="headerlink" href="#composable-skill-architecture" title="Permanent link">&para;</a></h3>
-<p>The Confluence skill can now be imported into any omniskill-based MCP server:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nx">confskill</span><span class="w"> </span><span class="s">&quot;github.com/plexusone/mcp-confluence/skills/confluence&quot;</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nx">runtime</span><span class="w"> </span><span class="s">&quot;github.com/plexusone/omniskill/mcp/server&quot;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">)</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1">// Add to your omniskill runtime</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nx">skill</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">confskill</span><span class="p">.</span><span class="nx">New</span><span class="p">(</span><span class="nx">httpClient</span><span class="p">,</span><span class="w"> </span><span class="nx">baseURL</span><span class="p">)</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nx">skill</span><span class="p">.</span><span class="nx">Init</span><span class="p">(</span><span class="nx">ctx</span><span class="p">)</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nx">rt</span><span class="p">.</span><span class="nx">RegisterSkill</span><span class="p">(</span><span class="nx">skill</span><span class="p">)</span>
-</code></pre></div>
-<h3 id="vault-backed-credentials">Vault-Backed Credentials<a class="headerlink" href="#vault-backed-credentials" title="Permanent link">&para;</a></h3>
-<p>Three authentication methods now supported:</p>
-<table>
-<thead>
-<tr>
-<th>Method</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Direct Credentials</td>
-<td>Base URL, username, API token via flags/env</td>
-</tr>
-<tr>
-<td>1Password</td>
-<td>Via <code>OP_SERVICE_ACCOUNT_TOKEN</code></td>
-</tr>
-<tr>
-<td>Bitwarden</td>
-<td>Via <code>BW_ACCESS_TOKEN</code> and <code>BW_ORGANIZATION_ID</code></td>
-</tr>
-</tbody>
-</table>
-<h3 id="cobra-cli">Cobra CLI<a class="headerlink" href="#cobra-cli" title="Permanent link">&para;</a></h3>
-<p>New subcommand structure:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>mcp-confluence<span class="w">                    </span><span class="c1"># Run MCP server (default)</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>mcp-confluence<span class="w"> </span>get-page<span class="w"> </span>&lt;id&gt;<span class="w">      </span><span class="c1"># Direct tool invocation</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>mcp-confluence<span class="w"> </span>search-pages<span class="w"> </span>&lt;cql&gt;<span class="w"> </span><span class="c1"># Search pages</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>mcp-confluence<span class="w"> </span>--help<span class="w">             </span><span class="c1"># Show all commands</span>
-</code></pre></div>
-<h3 id="api-testing-example">API Testing Example<a class="headerlink" href="#api-testing-example" title="Permanent link">&para;</a></h3>
-<p>New <code>cmd/api-confluence</code> for testing the Confluence client API directly.</p>
-<h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h2>
-<p>Comprehensive MkDocs documentation site added:</p>
+<h3 id="upgrade-guide">Upgrade Guide<a class="headerlink" href="#upgrade-guide" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Getting Started (installation, setup, quickstart)</li>
-<li>Configuration (credentials, environment, Claude Desktop)</li>
-<li>Storage Format (overview, blocks reference)</li>
-<li>Tools Reference</li>
+<li>Update import paths from <code>agentplexus</code> to <code>plexusone</code></li>
+<li>Update CLI flag syntax from <code>-flag</code> to <code>--flag</code></li>
+<li>Update <code>go install</code> path to <code>github.com/plexusone/mcp-confluence/cmd/mcp-confluence@latest</code></li>
 </ul>
-<h2 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Dependency</th>
-<th>Version</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>github.com/plexusone/omniskill</code></td>
-<td>v0.8.0</td>
-<td>Skill framework</td>
-</tr>
-<tr>
-<td><code>github.com/plexusone/omnitoken</code></td>
-<td>v0.1.0</td>
-<td>Token/credential management</td>
-</tr>
-<tr>
-<td><code>github.com/plexusone/omnivault-desktop</code></td>
-<td>v0.1.0</td>
-<td>Vault provider registration</td>
-</tr>
-<tr>
-<td><code>github.com/spf13/cobra</code></td>
-<td>v1.10.2</td>
-<td>CLI framework</td>
-</tr>
-</tbody>
-</table>
-<h2 id="migration-guide">Migration Guide<a class="headerlink" href="#migration-guide" title="Permanent link">&para;</a></h2>
-<h3 id="update-installation">Update Installation<a class="headerlink" href="#update-installation" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Old</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>go<span class="w"> </span>install<span class="w"> </span>github.com/agentplexus/mcp-confluence/cmd/mcp-confluence@latest
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># New</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>go<span class="w"> </span>install<span class="w"> </span>github.com/plexusone/mcp-confluence/cmd/mcp-confluence@latest
-</code></pre></div>
-<h3 id="update-imports">Update Imports<a class="headerlink" href="#update-imports" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">// Old</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;github.com/agentplexus/mcp-confluence/confluence&quot;</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1">// New</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;github.com/plexusone/mcp-confluence/confluence&quot;</span>
-</code></pre></div>
-<h3 id="update-claude-desktop-configuration">Update Claude Desktop Configuration<a class="headerlink" href="#update-claude-desktop-configuration" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">{</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">&quot;mcpServers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="nt">&quot;confluence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">      </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/path/to/mcp-confluence&quot;</span><span class="p">,</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">      </span><span class="nt">&quot;env&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">        </span><span class="nt">&quot;CONFLUENCE_BASE_URL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://example.atlassian.net/wiki&quot;</span><span class="p">,</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">        </span><span class="nt">&quot;CONFLUENCE_USERNAME&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;user@example.com&quot;</span><span class="p">,</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">        </span><span class="nt">&quot;CONFLUENCE_API_TOKEN&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;your-token&quot;</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">      </span><span class="p">}</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="p">}</span>
-</code></pre></div>
+<h3 id="added">Added<a class="headerlink" href="#added" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Composable Confluence skill using omniskill framework (<a href="https://github.com/plexusone/mcp-confluence/commit/4cc2a3d"><code>4cc2a3d</code></a>)</li>
+<li>Cobra-based CLI with subcommands (serve, get-page, search-pages, etc.) (<a href="https://github.com/plexusone/mcp-confluence/commit/978eb21"><code>978eb21</code></a>)</li>
+<li>Vault-backed credentials via omnitoken (1Password, Bitwarden) (<a href="https://github.com/plexusone/mcp-confluence/commit/978eb21"><code>978eb21</code></a>)</li>
+<li>Direct CLI tool invocation for testing and scripting (<a href="https://github.com/plexusone/mcp-confluence/commit/978eb21"><code>978eb21</code></a>)</li>
+<li>API testing example in cmd/api-confluence (<a href="https://github.com/plexusone/mcp-confluence/commit/fefaa60"><code>fefaa60</code></a>)</li>
+<li>Comprehensive MkDocs documentation site (<a href="https://github.com/plexusone/mcp-confluence/commit/46d554b"><code>46d554b</code></a>)</li>
+</ul>
+<h3 id="changed">Changed<a class="headerlink" href="#changed" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Module renamed from <code>agentplexus</code> to <code>plexusone</code> organization (<a href="https://github.com/plexusone/mcp-confluence/commit/0a3b89f"><code>0a3b89f</code></a>)</li>
+<li>Server now uses omniskill runtime instead of custom JSON-RPC handler (<a href="https://github.com/plexusone/mcp-confluence/commit/978eb21"><code>978eb21</code></a>)</li>
+</ul>
+<h3 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add <code>github.com/plexusone/omniskill</code> v0.8.0 for skill framework (<a href="https://github.com/plexusone/mcp-confluence/commit/e91c665"><code>e91c665</code></a>)</li>
+<li>Add <code>github.com/plexusone/omnitoken</code> v0.1.0 for credential management (<a href="https://github.com/plexusone/mcp-confluence/commit/e91c665"><code>e91c665</code></a>)</li>
+<li>Add <code>github.com/plexusone/omnivault-desktop</code> v0.1.0 for vault providers (<a href="https://github.com/plexusone/mcp-confluence/commit/e91c665"><code>e91c665</code></a>)</li>
+<li>Add <code>github.com/spf13/cobra</code> v1.10.2 for CLI framework (<a href="https://github.com/plexusone/mcp-confluence/commit/e91c665"><code>e91c665</code></a>)</li>
+</ul>
+<h3 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add getting started guides (installation, setup, quickstart) (<a href="https://github.com/plexusone/mcp-confluence/commit/46d554b"><code>46d554b</code></a>)</li>
+<li>Add configuration documentation (credentials, environment, Claude Desktop) (<a href="https://github.com/plexusone/mcp-confluence/commit/46d554b"><code>46d554b</code></a>)</li>
+<li>Add storage format reference (overview, blocks) (<a href="https://github.com/plexusone/mcp-confluence/commit/46d554b"><code>46d554b</code></a>)</li>
+<li>Add tools reference documentation (<a href="https://github.com/plexusone/mcp-confluence/commit/46d554b"><code>46d554b</code></a>)</li>
+<li>Update README for vault-backed credentials and new module path (<a href="https://github.com/plexusone/mcp-confluence/commit/9c84acd"><code>9c84acd</code></a>)</li>
+</ul>
+<h2 id="v010-2025-12-29"><a href="https://github.com/plexusone/mcp-confluence/releases/tag/v0.1.0">v0.1.0</a> - 2025-12-29<a class="headerlink" href="#v010-2025-12-29" title="Permanent link">&para;</a></h2>
+<h3 id="highlights_1">Highlights<a class="headerlink" href="#highlights_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Initial release with MCP tools for safe Confluence page editing</li>
+<li>Structured content blocks for creating and reading pages</li>
+<li>Lossless XHTML round-trip editing for complex pages</li>
+</ul>
+<h3 id="added_1">Added<a class="headerlink" href="#added_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>confluence_read_page</code> tool for reading pages as structured content blocks (<a href="https://github.com/plexusone/mcp-confluence/commit/df233c7"><code>df233c7</code></a>)</li>
+<li><code>confluence_read_page_xhtml</code> tool for reading pages as raw Storage Format XHTML (<a href="https://github.com/plexusone/mcp-confluence/commit/df233c7"><code>df233c7</code></a>)</li>
+<li><code>confluence_update_page</code> tool for updating pages with structured content blocks (<a href="https://github.com/plexusone/mcp-confluence/commit/df233c7"><code>df233c7</code></a>)</li>
+<li><code>confluence_update_page_xhtml</code> tool for updating pages with raw XHTML (<a href="https://github.com/plexusone/mcp-confluence/commit/df233c7"><code>df233c7</code></a>)</li>
+<li><code>confluence_create_page</code> tool for creating new pages with structured blocks (<a href="https://github.com/plexusone/mcp-confluence/commit/df233c7"><code>df233c7</code></a>)</li>
+<li><code>confluence_create_table</code> tool for creating table blocks from structured data (<a href="https://github.com/plexusone/mcp-confluence/commit/df233c7"><code>df233c7</code></a>)</li>
+<li><code>confluence_delete_page</code> tool for deleting pages by ID (<a href="https://github.com/plexusone/mcp-confluence/commit/df233c7"><code>df233c7</code></a>)</li>
+<li><code>confluence_search_pages</code> tool for searching pages using CQL (<a href="https://github.com/plexusone/mcp-confluence/commit/df233c7"><code>df233c7</code></a>)</li>
+<li>Structured block types: Paragraph, Heading, Table, BulletList, NumberedList, Macro, CodeBlock, HorizontalRule (<a href="https://github.com/plexusone/mcp-confluence/commit/df233c7"><code>df233c7</code></a>)</li>
+<li>Storage package with Parse, Render, and Validate functions (<a href="https://github.com/plexusone/mcp-confluence/commit/df233c7"><code>df233c7</code></a>)</li>
+<li>HTML entity support for Storage Format XHTML (<a href="https://github.com/plexusone/mcp-confluence/commit/df233c7"><code>df233c7</code></a>)</li>
+<li>Confluence REST API client with basic authentication (<a href="https://github.com/plexusone/mcp-confluence/commit/df233c7"><code>df233c7</code></a>)</li>
+</ul>
 
 
 
